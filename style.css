@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --color-red: hsl(1, 90%, 64%);
+    --color-blue: hsl(219, 85%, 26%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-grayish-blue-1 : hsl(210, 60%, 98%);
+    --color-light-grayish-blue-2 : hsl(211, 68%, 94%);
+    --color-light-grayish-blue-3: hsl(205, 33%, 90%);
+    --color-grayish-blue: hsl(219, 14%, 63%);
+    --color-dark-grayish-blue: hsl(219, 12%, 42%);
+    --color-very-dark-blue: hsl(224, 21%, 14%);
+    --font-style: 'Plus Jakarta Sans', sans-serif;
+    --notifications: '4';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-white);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.notification-wrapper-main {
+    border: 1px solid var(--color-light-grayish-blue-2);
+    border-radius: 0.5rem;
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 50px var(--color-light-grayish-blue-2);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.nav-bar .notifications-header {
+    font-family: var(--font-style);
+}
+
+.nav-bar .notifications-header::after {
+    content: var(--notifications);
+    background-color: var(--color-blue);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+    color: var(--color-white);
+    font-size: 14px;
+    margin-left: 0.3rem;
+}
+
+.nav-bar .mark-as-read {
+    font-family: var(--font-style);
+}
+
+.nav-bar .mark-as-read:hover {
+    cursor: pointer;
+}
+
+.main-container {
+    padding: 0 1.5rem;
+}
+
+.main-container .notification-divs {
+    display: flex;
+    margin-bottom: 1rem;
+    background-color: var(--color-white);
+    border: var(--color-light-grayish-blue-1);
+    box-shadow: 0px 0px 5px var(--color-light-grayish-blue-1);
+    padding: 1rem 1rem;
+}
+
+.main-container .notification-divs:hover {
+    cursor: pointer;
+}
+
+.main-container .notification-divs .profile-picture {
+    width: 2rem;
+    height: 2rem;
+}
+
+.main-container .notification-divs .profile-picture {
+    margin-right: 1rem;
+}
+
+.wrapper-container {
+    width: 100%;
+}
+
+.wrapper-container .profiile-name {
+    font-size: 12px;
+    font-family: var(--font-style);
+    display: inline;
+}
+
+.wrapper-container .notification-intent {
+    font-family: var(--font-style);
+    font-size: 12px;
+    display: inline;
+    color: var(--color-dark-grayish-blue);
+}
+
+.wrapper-container .my-comment {
+    font-family: var(--font-style);
+    display: inline;
+    color: var(--color-very-dark-blue);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.wrapper-container .notification-time {
+    font-family: var(--font-style);
+    font-size: 11px;
+    color: var(--color-dark-grayish-blue);
+    padding-top: 0.3rem;
+}
+
+.wrapper-container > a {
+    text-decoration: none;
+    font-family: var(--font-style);
+    font-size: 12px;
+    color: var(--color-blue);
+    font-weight: 700;
+}
+
+.wrapper-container > *:nth-last-child(2) {
+    width: min-content;
+}
+
+.wrapper-container > *:nth-last-child(2)::after {
+    content: '..';
+    margin-left: 0.3rem;
+    border: 1px solid var(--color-red);
+    border-radius: 50%;
+    background-color: var(--color-red);
+    color: var(--color-red);
+    font-size: 5px;
+    display: var(--display-property, inline);
+}
+
+.message-preview {
+    border: 1px solid var(--color-light-grayish-blue-1);
+    background-color: var(--color-light-grayish-blue-1);
+    border-radius: 0.2rem;
+    font-family: var(--font-style);
+    padding: 0.5rem;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: var(--color-dark-grayish-blue);
+}
+
+.comment-picture {
+    width: 2.5rem;
+}
+
+@media (max-width: 50em) {
+    body{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .nav-bar {
+        padding: 1rem 0.5rem;
+    }
+
+    .nav-bar .notifications-header {
+        font-size: 18px;
+    }
+
+    .nav-bar .mark-as-read {
+        font-size: 12px;
+    }
+
+    .notification-wrapper-main {
+        width: 20em;
+    }
+
+    .main-container {
+        padding: 0 0.5rem;
+    }
+
+    .main-container .notification-divs {
+        padding: 1rem 1rem;
+    }
+
+    .main-container .notification-divs .profile-picture {
+        margin-right: 0.5rem;
+    }
+}
+
